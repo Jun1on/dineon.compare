@@ -3,7 +3,7 @@ const for_menus = true
 const with_address = false
 const with_buildings = true
 
-async function getMenu(schoolgetMenu, dategetMenu) {
+async function getMenu(school, date) {
     let data = {}
     const info_response = await fetch(`https://api.dineoncampus.com/v1/sites/${school}/info`).then(res => res.json())
     const site_id = info_response.site.id
@@ -30,7 +30,7 @@ async function getMenu(schoolgetMenu, dategetMenu) {
     return data
 }
 let cache = {}
-async function getMenuCached(schoolgetMenu, dategetMenu) {
+async function getMenuCached(school, date) {
     if (cache[school] && cache[school][date]) {
         return cache[school][date]
     } else {
@@ -43,7 +43,7 @@ async function getMenuCached(schoolgetMenu, dategetMenu) {
     }
 }
 
-async function getDiff(schoolgetMenu, beforeDategetMenu, nowDategetMenu) {
+async function getDiff(school, beforedate, nowdate) {
     let diff = {}
     let same = {}
     const [now, before] = await Promise.all([
