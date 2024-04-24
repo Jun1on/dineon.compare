@@ -43,7 +43,7 @@ async function getMenuCached(school, date) {
     }
 }
 
-async function getDiff(school, beforedate, nowdate) {
+async function getDiff(school, beforeDate, nowDate) {
     let diff = {}
     let same = {}
     const [now, before] = await Promise.all([
