@@ -46,7 +46,7 @@ export function HoverBorderGradient({
   const CENTER = "radial-gradient(circle at 50% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)"
 
   const highlight =
-    "radial-gradient(75% 181.15942028985506% at 50% 50%, #88AAFF 0%, rgba(255, 255, 255, 0) 100%)";
+    "radial-gradient(75% 181.15942028985506% at 50% 50%, #22C55E 0%, rgba(255, 255, 255, 0) 100%)";
   useEffect(() => {
     if (!open) {
       if (firstRender) {

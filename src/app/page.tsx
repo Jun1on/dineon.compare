@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Spotlight } from "@/components/ui/spotlight";
-import { ComboboxDemo } from "./select";
+import { Select } from "./select";
 
 export default function BackgroundGradientAnimationDemo() {
   const interactiveRef = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ export default function BackgroundGradientAnimationDemo() {
   };
 
   return (
-    <div onMouseMove={handleMouseMove} className="h-screen w-full bg-black bg-grid-white/[0.2] relative flex items-center justify-center antialiased overflow-hidden">
+    <div onMouseMove={handleMouseMove} className="h-screen w-full bg-black bg-grid-white/[0.1] relative flex justify-center antialiased overflow-hidden">
       <div
         ref={interactiveRef}
         className={`absolute inset-0 bg-blue`/* [mask-image:radial-gradient(ellipse_at_3.76%_6.29%,transparent_0%,black)]*/}
@@ -30,13 +30,12 @@ export default function BackgroundGradientAnimationDemo() {
       ></div>
       
       <div className="flex flex-col items-center p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
-        <h1 className="text-4xl md:text-7xl font-bold text-center mb-10">
+        <h1 className="text-4xl md:text-7xl font-bold text-center mt-24 mb-10">
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 bg-opacity-50">
             Compare dining options.
           </span>
         </h1>
-        <ComboboxDemo />
-        <div className="m-12" />
+        <Select />
       </div>
     </div>
   );

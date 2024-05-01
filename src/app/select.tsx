@@ -19,7 +19,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function ComboboxDemo() {
+export function Select() {
   const [open, setOpen] = React.useState(false);
   const [schools, setSchools] = React.useState([]);
 
