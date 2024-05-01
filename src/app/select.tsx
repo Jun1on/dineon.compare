@@ -49,7 +49,7 @@ export function Select() {
         }}
       >
         <div>
-          <HoverBorderGradient className="w-[300px]" open={open}>
+          <HoverBorderGradient className="w-[300px] cursor-default" open={open}>
             <span>Select your school</span>
           </HoverBorderGradient>
         </div>
@@ -68,7 +68,7 @@ export function Select() {
                   key={option.slug}
                   value={option.slug}
                   onSelect={() => {
-                    window.location.href = "/" + option.slug;
+                    window.location.href = "https://dineoncampus.com/" + option.slug;
                   }}
                 >
                   {option.name}
